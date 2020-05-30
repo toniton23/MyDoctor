@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
+import * as Animatable from "react-native-animatable";
 import { Header, BackButton, Button, Gap, Link } from "../components";
 import { User, BtnPlus } from "../asset/img";
 import { colors } from "../utils/colors";
@@ -13,7 +14,7 @@ const UploadPhoto = ({ navigation }) => {
           onPress={() => navigation.navigate("GetStarted")}
         />
       </View>
-      <View style={styles.body}>
+      <Animatable.View animation="fadeInUpBig" style={styles.body}>
         <View style={styles.avatarWrapper}>
           <Image source={User} style={styles.avatar} />
           <Image source={BtnPlus} style={styles.BtnPlus} />
@@ -28,7 +29,7 @@ const UploadPhoto = ({ navigation }) => {
         </View>
         <Gap height={30} />
         <Link title="Skip for this" size={16} />
-      </View>
+      </Animatable.View>
     </View>
   );
 };

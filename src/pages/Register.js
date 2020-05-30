@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { Input, Button, Gap, BackButton } from "../components";
+import * as Animatable from "react-native-animatable";
 import { Doctor } from "../asset/img";
 import { colors } from "../utils/colors";
 
@@ -12,7 +13,7 @@ const Login = ({ onPress, navigation }) => {
         <Image source={Doctor} style={styles.image} />
         <Text style={styles.header}>Register</Text>
       </View>
-      <View style={styles.bottom}>
+      <Animatable.View animation="fadeInUpBig" style={styles.bottom}>
         <View>
           <View style={{ marginTop: -20 }}>
             <Input label="Full Name" />
@@ -29,7 +30,7 @@ const Login = ({ onPress, navigation }) => {
             onPress={() => navigation.navigate("UploadPhoto")}
           />
         </View>
-      </View>
+      </Animatable.View>
     </View>
   );
 };

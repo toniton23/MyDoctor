@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
+import * as Animatable from "react-native-animatable";
 import { Input, Link, Button, Gap } from "../components";
 import { Doctor } from "../asset/img";
 
@@ -10,7 +11,7 @@ const Login = ({ navigation }) => {
         <Image source={Doctor} style={styles.image} />
         <Text style={styles.header}>Masuk dan mulai berkonsultasi</Text>
       </View>
-      <View style={styles.bottom}>
+      <Animatable.View animation="fadeInUpBig" style={styles.bottom}>
         <View>
           <Input label="Email Address" />
           <Gap height={24} />
@@ -25,7 +26,7 @@ const Login = ({ navigation }) => {
           <Gap height={60} />
           <Link title="Create New Account" size={16} align="center" />
         </View>
-      </View>
+      </Animatable.View>
     </View>
   );
 };

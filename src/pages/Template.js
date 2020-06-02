@@ -1,8 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, ScrollView } from "react-native";
 import { colors } from "../utils/colors";
-import { MassageList, Gap } from "../components";
-import { Susi, Toni, Ela } from "../asset";
 
 const Massages = () => {
   return (
@@ -12,32 +10,7 @@ const Massages = () => {
       </View>
       <View style={styles.body}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <View style={styles.innerBody}>
-            <View style={styles.wrapperChat}>
-              <MassageList
-                image={Susi}
-                name="Susi Hasibuan"
-                chat="Baik bu, terimakasih atas waktunya"
-              />
-            </View>
-            <Gap height={16} />
-            <View style={styles.wrapperChat}>
-              <MassageList
-                image={Toni}
-                name="Toni susilo"
-                chat="siang pak, saya sakit apa ya pa..?"
-              />
-            </View>
-            <Gap height={16} />
-            <View style={styles.wrapperChat}>
-              <MassageList
-                image={Ela}
-                name="Ela Sinta Dewi"
-                chat="Oh tentu saja tidak, jeruk itu bagus ko dan murah pula"
-              />
-            </View>
-            <Gap height={16} />
-          </View>
+          <View style={styles.innerBody}></View>
         </ScrollView>
       </View>
     </View>
@@ -47,12 +20,8 @@ const Massages = () => {
 export default Massages;
 
 const styles = StyleSheet.create({
-  wrapperChat: {
-    borderWidth: 0.1,
-    color: colors.secondary,
-    borderRadius: 25,
-  },
   innerBody: {
+    backgroundColor: "yellow",
     height: "100%",
     width: "96%",
     borderTopRightRadius: 25,

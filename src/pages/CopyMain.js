@@ -1,9 +1,5 @@
 import * as React from "react";
-import {
-  Fontisto,
-  MaterialIcons,
-  MaterialCommunityIcons,
-} from "@expo/vector-icons";
+import { Fontisto, MaterialIcons } from "@expo/vector-icons";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { DoctorPage, Hospital } from ".";
@@ -15,7 +11,7 @@ const MainTabScreen = () => (
   <Tab.Navigator
     initialRouteName="Doctor"
     activeColor="red"
-    style={{ backgroundColor: "red" }}
+    style={{ backgroundColor: "yellow" }}
   >
     <Tab.Screen
       name="Doctor"
@@ -32,7 +28,7 @@ const MainTabScreen = () => (
       name="Massage"
       component={Massages}
       options={{
-        tabBarLabel: "Doctor",
+        tabBarLabel: "Massages",
         tabBarColor: "red",
         tabBarIcon: ({ color }) => (
           <MaterialIcons name="chat-bubble" color={color} size={26} />
@@ -46,11 +42,7 @@ const MainTabScreen = () => (
         tabBarLabel: "Hospital",
         tabBarColor: "red",
         tabBarIcon: ({ color }) => (
-          <MaterialCommunityIcons
-            name="chat-processing"
-            size={24}
-            color={color}
-          />
+          <MaterialIcons name="local-hospital" size={26} color={color} />
         ),
       }}
     />

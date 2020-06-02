@@ -34,7 +34,7 @@ const Login = ({ navigation }) => {
 export default Login;
 
 const styles = StyleSheet.create({
-  image: { height: 210, width: 150 },
+  image: { height: 210, width: 150, marginTop: -20 },
   header: {
     fontSize: 20,
     fontWeight: "bold",
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     maxWidth: 200,
   },
   top: {
-    height: "30%",
+    height: "25%",
     width: "100%",
     backgroundColor: "#0BCAD4",
     justifyContent: "center",
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     paddingTop: 40,
   },
   bottom: {
-    height: "70%",
+    height: "75%",
     width: "100%",
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,

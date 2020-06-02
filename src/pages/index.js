@@ -7,8 +7,20 @@ import DoctorPage from "./DoctorPage";
 import Massages from "./Massages";
 import Hospital from "./Hospital";
 import MainApp from "./MainApp";
+import DokterUmum from "./DokterUmum";
+import DokterGigi from "./DokterGigi";
+import DokterMata from "./DokterMata";
+import DokterIbu from "./DokterIbu";
+import DokterKandungan from "./DokterKandungan";
+import Chating from "./Chating";
 
 export {
+  Chating,
+  DokterKandungan,
+  DokterIbu,
+  DokterMata,
+  DokterGigi,
+  DokterUmum,
   MainApp,
   Splash,
   GetStarted,

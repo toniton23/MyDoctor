@@ -7,7 +7,7 @@ import { colors } from "../utils/colors";
 
 const UploadPhoto = ({ navigation }) => {
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.header}>
         <Header
           title="Upload Photo"
@@ -69,5 +69,9 @@ const styles = StyleSheet.create({
     height: "25%",
     width: "100%",
     flexDirection: "row",
+  },
+  container: {
+    flex: 1,
+    backgroundColor: colors.default,
   },
 });

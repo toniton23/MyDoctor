@@ -11,6 +11,13 @@ import {
   Hospital,
   Doctor,
   MainApp,
+  DoctorPage,
+  DokterUmum,
+  DokterGigi,
+  DokterMata,
+  DokterIbu,
+  DokterKandungan,
+  Chating,
 } from "../pages";
 import { BottomNavigator } from "../components";
 
@@ -31,7 +38,7 @@ const Tab = createBottomTabNavigator();
 
 const Router = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Splash">
       <Stack.Screen
         name="Splash"
         component={Splash}
@@ -60,6 +67,51 @@ const Router = () => {
       <Stack.Screen
         name="MainApp"
         component={MainApp}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Doctor"
+        component={DoctorPage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Massages"
+        component={Massages}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Hospital"
+        component={Hospital}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DokterUmum"
+        component={DokterUmum}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DokterGigi"
+        component={DokterGigi}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DokterMata"
+        component={DokterMata}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DokterIbu"
+        component={DokterIbu}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DokterKandungan"
+        component={DokterKandungan}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Chating"
+        component={Chating}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

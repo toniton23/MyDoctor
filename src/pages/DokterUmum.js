@@ -17,14 +17,21 @@ const DokterUmum = ({ navigation }) => {
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.innerBody}>
             <View style={styles.wrapperChat}>
-              <MassageList image={Toni} name="Ali Ridwan" chat="Dokter Umum" />
+              <MassageList
+                image={Toni}
+                name="Ali Ridwan"
+                chat="Dokter Umum"
+                onPress={() => navigation.navigate("DokterProfile")}
+              />
               <Gap height={16} />
             </View>
+
             <View style={styles.wrapperChat}>
               <MassageList
                 image={Ela}
                 name="Jenny Mulyani"
                 chat="Dokter Umum"
+                onPress={() => navigation.navigate("DokceProfile")}
               />
               <Gap height={16} />
             </View>

@@ -15,7 +15,12 @@ const Doctor = ({ navigation }) => {
         <View style={{ flexDirection: "row" }}>
           <BackButton onPress={() => navigation.goBack()} />
           <Gap width={20} />
-          <HomeProfile pict={Toni} name="Ali Ridwan" desc="Dokter Gigi" />
+          <HomeProfile
+            pict={Toni}
+            name="Ali Ridwan"
+            desc="Dokter Gigi"
+            onPress={() => navigation.navigate("DokterProfile")}
+          />
         </View>
       </View>
       <View style={styles.body}>

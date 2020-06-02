@@ -24,7 +24,12 @@ const Login = ({ navigation }) => {
             onPress={() => navigation.replace("MainApp")}
           />
           <Gap height={60} />
-          <Link title="Create New Account" size={16} align="center" />
+          <Link
+            title="Create New Account"
+            size={16}
+            align="center"
+            onPress={() => navigation.navigate("Register")}
+          />
         </View>
       </Animatable.View>
     </View>
@@ -39,7 +44,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     marginTop: 40,
-
     color: "white",
     maxWidth: 200,
   },

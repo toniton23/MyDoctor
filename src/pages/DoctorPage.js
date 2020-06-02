@@ -27,6 +27,7 @@ const Doctor = ({ navigation }) => {
           pict={Shay}
           name="Putri Melinda"
           desc="Marketing Manager"
+          onPress={() => navigation.navigate("UserProfile")}
         />
       </View>
       <View style={styles.body}>
@@ -74,11 +75,22 @@ const Doctor = ({ navigation }) => {
               image={Alexa}
               name="Shinta Nuraini"
               job="Dokter Umum"
+              onPress={() => navigation.navigate("DokceProfile")}
             />
             <Gap height={16} />
-            <RatedDoctor image={Sunny} name="Wahyudin Oey" job="Dokter Gigi" />
+            <RatedDoctor
+              image={Sunny}
+              name="Wahyudin Oey"
+              job="Dokter Gigi"
+              onPress={() => navigation.navigate("DokterProfile")}
+            />
             <Gap height={16} />
-            <RatedDoctor image={Poe} name="Jamilah Wahab" job="Dokter Mata" />
+            <RatedDoctor
+              image={Poe}
+              name="Jamilah Wahab"
+              job="Dokter Mata"
+              onPress={() => navigation.navigate("DokceProfile")}
+            />
             <Gap height={30} />
             <Text style={styles.good}>GoodNews</Text>
             <Gap height={16} />

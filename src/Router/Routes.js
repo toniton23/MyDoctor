@@ -9,7 +9,6 @@ import {
   UploadPhoto,
   Massages,
   Hospital,
-  Doctor,
   MainApp,
   DoctorPage,
   DokterUmum,
@@ -18,8 +17,11 @@ import {
   DokterIbu,
   DokterKandungan,
   Chating,
+  UserProfile,
+  DokterProfile,
+  EditProfile,
+  DokceProfile,
 } from "../pages";
-import { BottomNavigator } from "../components";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -112,6 +114,26 @@ const Router = () => {
       <Stack.Screen
         name="Chating"
         component={Chating}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="UserProfile"
+        component={UserProfile}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DokterProfile"
+        component={DokterProfile}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="EditProfile"
+        component={EditProfile}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DokceProfile"
+        component={DokceProfile}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

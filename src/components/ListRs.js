@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
-import { Rs2 } from "../asset/img";
 import { colors } from "../utils/colors";
 
 const ListRs = ({ image, title, desc }) => {

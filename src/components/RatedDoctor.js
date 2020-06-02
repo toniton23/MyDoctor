@@ -1,11 +1,11 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { Star } from "../asset";
 import { colors } from "../utils/colors";
 
-const RatedDoctor = ({ image, name, job }) => {
+const RatedDoctor = ({ image, name, job, onPress }) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Image source={image} style={styles.image} />
       <View style={styles.text}>
         <Text style={styles.name}>{name}</Text>
@@ -18,7 +18,7 @@ const RatedDoctor = ({ image, name, job }) => {
         <Image source={Star} style={styles.star} />
         <Image source={Star} style={styles.star} />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

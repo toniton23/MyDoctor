@@ -7,7 +7,7 @@ const BottomMenu = ({ title, onPress, image }) => {
       <TouchableOpacity style={styles.press} onPress={onPress}>
         <View style={styles.wrapperMenu}>
           <View style={styles.menu}>
-            <Image source={image} style={{ height: 35, width: 35 }} />
+            <Image source={image} style={styles.image} />
           </View>
         </View>
         <Text style={{ color: "white" }}>{title}</Text>
@@ -19,6 +19,7 @@ const BottomMenu = ({ title, onPress, image }) => {
 export default BottomMenu;
 
 const styles = StyleSheet.create({
+  image: { height: 35, width: 35 },
   menu: {
     backgroundColor: "tomato",
     height: 55,

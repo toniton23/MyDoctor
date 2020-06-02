@@ -4,7 +4,7 @@ import { colors } from "../utils/colors";
 import { MassageList, Gap } from "../components";
 import { Susi, Toni, Ela } from "../asset";
 
-const Massages = () => {
+const Massages = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
@@ -18,6 +18,7 @@ const Massages = () => {
                 image={Susi}
                 name="Susi Hasibuan"
                 chat="Baik bu, terimakasih atas waktunya"
+                onPress={() => navigation.navigate("Chating")}
               />
             </View>
             <Gap height={16} />
@@ -26,6 +27,7 @@ const Massages = () => {
                 image={Toni}
                 name="Toni susilo"
                 chat="siang pak, saya sakit apa ya pa..?"
+                onPress={() => navigation.navigate("Chating")}
               />
             </View>
             <Gap height={16} />
@@ -34,6 +36,7 @@ const Massages = () => {
                 image={Ela}
                 name="Ela Sinta Dewi"
                 chat="Oh tentu saja tidak, jeruk itu bagus ko dan murah pula"
+                onPress={() => navigation.navigate("Chating")}
               />
             </View>
             <Gap height={16} />

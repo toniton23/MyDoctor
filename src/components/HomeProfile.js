@@ -1,12 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
-import { Shay } from "../asset";
-import { colors } from "../utils/colors";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
-const HomeProfile = ({ pict, name, desc }) => {
+const HomeProfile = ({ pict, name, desc, onPress }) => {
   return (
     <View style={styles.container}>
-      <Image source={pict} style={styles.image} />
+      <TouchableOpacity onPress={onPress}>
+        <Image source={pict} style={styles.image} />
+      </TouchableOpacity>
       <View style={styles.text}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.job}>{desc}</Text>
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
   text: { marginLeft: 20 },
   container: {
     flexDirection: "row",
+    alignItems: "center",
   },
   image: {
     height: 56,

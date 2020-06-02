@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
-import { Susi } from "../asset";
 import { colors } from "../utils/colors";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
@@ -21,7 +20,6 @@ export default MassageList;
 const styles = StyleSheet.create({
   text: { fontSize: 12, color: colors.secondary, maxWidth: 250 },
   name: { fontSize: 16, fontWeight: "500" },
-
   image: {
     width: 46,
     height: 46,

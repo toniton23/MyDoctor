@@ -30,8 +30,18 @@ import Rs4 from "./Rs4.png";
 import Hamil from "./hamil.png";
 import Send from "./send.png";
 import SendAbu from "./sendabu.png";
+import Paper from "./paper.png";
+import Bintang from "./bintang.png";
+import Translate from "./translate.png";
+import Orang from "./orang.png";
+import Next from "./next.png";
 
 export {
+  Orang,
+  Next,
+  Translate,
+  Bintang,
+  Paper,
   SendAbu,
   Send,
   Hamil,

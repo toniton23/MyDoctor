@@ -21,7 +21,7 @@ const GokterGigi = ({ navigation }) => {
                 image={Toni}
                 name="Ali Ridwan"
                 chat="Dokter Gigi"
-                onPress={() => navigation.navigate("Chating")}
+                onPress={() => navigation.navigate("DokterProfile")}
               />
               <Gap height={16} />
             </View>
@@ -30,6 +30,7 @@ const GokterGigi = ({ navigation }) => {
                 image={Ela}
                 name="Jenny Mulyani"
                 chat="Dokter Gigi"
+                onPress={() => navigation.navigate("DokceProfile")}
               />
               <Gap height={16} />
             </View>

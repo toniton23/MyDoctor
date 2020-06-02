@@ -1,41 +1,46 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import * as Animatable from "react-native-animatable";
-import { Header, Button, Gap, Link } from "../components";
-import { User, BtnPlus } from "../asset/img";
+import { Header, Button, Gap } from "../components";
+import { Toni } from "../asset/img";
 import { colors } from "../utils/colors";
 
 const UploadPhoto = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Header
-          title="Upload Photo"
-          onPress={() => navigation.navigate("GetStarted")}
-        />
+        <Header title="Doctor Profile" onPress={() => navigation.goBack()} />
       </View>
       <Animatable.View animation="fadeInUpBig" style={styles.body}>
         <View style={styles.avatarWrapper}>
-          <Image source={User} style={styles.avatar} />
-          <Image source={BtnPlus} style={styles.BtnPlus} />
+          <Image source={Toni} style={styles.avatar} />
         </View>
-        <Gap height={28} />
-        <Text style={styles.name}>Jenifer Castelo</Text>
+        <Gap height={16} />
+        <Text style={styles.name}>Ali Ridwan</Text>
         <Gap height={4} />
-        <Text style={styles.job}>Marketing Manager</Text>
-        <Gap height={88} />
+        <Text style={styles.job}>Dokter Gigi</Text>
+        <Gap height={26} />
+        <View style={styles.wrapperDesc}>
+          <Text style={styles.alum}>Alumnus</Text>
+          <Text style={styles.uni}>Universitas Trisaki, 2002</Text>
+        </View>
+        <Gap height={5} />
+        <View style={styles.wrapperDesc}>
+          <Text style={styles.alum}>Tempat Praktek</Text>
+          <Text style={styles.uni}>Rumah Salit Harapan Jaya</Text>
+        </View>
+        <Gap height={5} />
+        <View style={styles.wrapperDesc}>
+          <Text style={styles.alum}>No. STR</Text>
+          <Text style={styles.uni}>852963741123654</Text>
+        </View>
+        <Gap height={15} />
         <View style={styles.wrapperButton}>
           <Button
-            title="Upload and Continue"
-            onPress={() => navigation.replace("MainApp")}
+            title="Start Consultation"
+            onPress={() => navigation.navigate("Chating")}
           />
         </View>
-        <Gap height={30} />
-        <Link
-          title="Skip for this"
-          size={16}
-          onPress={() => navigation.replace("MainApp")}
-        />
       </Animatable.View>
     </View>
   );
@@ -44,6 +49,16 @@ const UploadPhoto = ({ navigation }) => {
 export default UploadPhoto;
 
 const styles = StyleSheet.create({
+  uni: { fontSize: 14, fontWeight: "800" },
+  alum: {
+    fontSize: 14,
+    color: colors.secondary,
+  },
+  wrapperDesc: {
+    height: 60,
+    width: "100%",
+    paddingHorizontal: 20,
+  },
   wrapperButton: { width: "70%" },
   job: { fontSize: 18, fontWeight: "100", color: colors.secondary },
   name: { fontSize: 24 },
@@ -54,10 +69,10 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
   },
-  avatar: { height: 110, width: 110 },
+  avatar: { height: 110, width: 110, borderRadius: 110 / 2 },
   avatarWrapper: {
     flexDirection: "row",
-    marginTop: 50,
+    marginTop: 10,
     height: 130,
     width: 130,
     borderRadius: 130 / 2,

@@ -13,8 +13,16 @@ import DokterMata from "./DokterMata";
 import DokterIbu from "./DokterIbu";
 import DokterKandungan from "./DokterKandungan";
 import Chating from "./Chating";
+import UserProfile from "./UserProfile";
+import DokterProfile from "./DokterProfile";
+import EditProfile from "./EditProfile";
+import DokceProfile from "./DokceProfile";
 
 export {
+  DokceProfile,
+  EditProfile,
+  DokterProfile,
+  UserProfile,
   Chating,
   DokterKandungan,
   DokterIbu,

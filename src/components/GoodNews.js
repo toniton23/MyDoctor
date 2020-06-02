@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
-import { Gedung } from "../asset";
 import { colors } from "../utils/colors";
 
 const GoodNews = ({ header, title, image }) => {

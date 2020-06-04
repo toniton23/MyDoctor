@@ -1,11 +1,33 @@
-import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import { Input, Button, Gap, BackButton } from "../components";
 import * as Animatable from "react-native-animatable";
 import { Doctor } from "../asset/img";
 import { colors } from "../utils/colors";
+import { useForm } from "../utils";
+import { Fire } from "../config";
 
-const Login = ({ onPress, navigation }) => {
+const Register = ({ onPress, navigation }) => {
+  const [form, setForm] = useForm({
+    fullName: "",
+    profession: "",
+    email: "",
+    password: "",
+  });
+
+  const onContinue = () => {
+    console.log(form);
+    Fire.auth()
+      .createUserWithEmailAndPassword(form.email, form.password)
+      .then((success) => {
+        console.log("register success", success);
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        console.log("error register:", errorMessage);
+      });
+    // navigation.navigate('UploadPhoto)
+  };
   return (
     <View style={styles.container}>
       <View style={styles.top}>
@@ -14,28 +36,42 @@ const Login = ({ onPress, navigation }) => {
         <Text style={styles.header}>Register</Text>
       </View>
       <Animatable.View animation="fadeInUpBig" style={styles.bottom}>
-        <View>
-          <View style={{ marginTop: -20 }}>
-            <Input label="Full Name" />
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={{ marginTop: -5 }}>
+            <Input
+              label="Full Name"
+              value={form.fullName}
+              onChangeText={(value) => setForm("fullName", value)}
+            />
             <Gap height={24} />
-            <Input label="Pekerjaan" />
+            <Input
+              label="Pekerjaan saya"
+              value={form.profession}
+              onChangeText={(value) => setForm("profession", value)}
+            />
             <Gap height={10} />
-            <Input label="Email Address" />
+            <Input
+              label="Email Address"
+              value={form.email}
+              onChangeText={(value) => setForm("email", value)}
+            />
             <Gap height={24} />
-            <Input label="Password" />
+            <Input
+              label="Password"
+              value={form.password}
+              onChangeText={(value) => setForm("password", value)}
+              secureTextEntry
+            />
             <Gap height={20} />
           </View>
-          <Button
-            title="Continue"
-            onPress={() => navigation.navigate("UploadPhoto")}
-          />
-        </View>
+          <Button title="Continue" onPress={onContinue} />
+        </ScrollView>
       </Animatable.View>
     </View>
   );
 };
 
-export default Login;
+export default Register;
 
 const styles = StyleSheet.create({
   image: { height: 210, width: 150, marginTop: -20 },

@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import * as Animatable from "react-native-animatable";
-import { Header, Button, Gap } from "../components";
+import { Header, Button, Gap, BackButton } from "../components";
 import { Toni, Susi, Ela } from "../asset/img";
 import { colors } from "../utils/colors";
 
@@ -9,7 +9,9 @@ const UploadPhoto = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Header title="Doctor Profile" onPress={() => navigation.goBack()} />
+        <BackButton onPress={() => navigation.goBack()} />
+        <Text style={styles.profile}>Doctor's Profile</Text>
+        <Gap width={25} />
       </View>
       <Animatable.View animation="fadeInUpBig" style={styles.body}>
         <View style={styles.avatarWrapper}>
@@ -24,17 +26,17 @@ const UploadPhoto = ({ navigation }) => {
           <Text style={styles.alum}>Alumnus</Text>
           <Text style={styles.uni}>Universitas Indonesia, 2005</Text>
         </View>
-        <Gap height={5} />
+        <Gap height={15} />
         <View style={styles.wrapperDesc}>
           <Text style={styles.alum}>Tempat Praktek</Text>
           <Text style={styles.uni}>Rumah Sakit Minta Nyawa</Text>
         </View>
-        <Gap height={5} />
+        <Gap height={15} />
         <View style={styles.wrapperDesc}>
           <Text style={styles.alum}>No. STR</Text>
           <Text style={styles.uni}>9517536547</Text>
         </View>
-        <Gap height={15} />
+        <Gap height={30} />
         <View style={styles.wrapperButton}>
           <Button
             title="Start Consultation"
@@ -49,6 +51,7 @@ const UploadPhoto = ({ navigation }) => {
 export default UploadPhoto;
 
 const styles = StyleSheet.create({
+  profile: { fontSize: 20, color: "white" },
   uni: { fontSize: 14, fontWeight: "800" },
   alum: {
     fontSize: 14,
@@ -80,7 +83,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   body: {
-    height: "75%",
+    height: "85%",
     width: "100%",
     backgroundColor: "white",
     borderTopLeftRadius: 25,
@@ -88,9 +91,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   header: {
-    height: "25%",
+    height: "15%",
     width: "100%",
     flexDirection: "row",
+    alignItems: "center",
+    paddingLeft: 20,
+    paddingTop: 20,
+    justifyContent: "space-between",
   },
   container: {
     flex: 1,

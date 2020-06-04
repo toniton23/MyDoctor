@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import * as Animatable from "react-native-animatable";
-import { Header, Gap } from "../components";
+import { Header, Gap, BackButton } from "../components";
 import {
   Toni,
   Shay,
@@ -17,7 +17,9 @@ const UploadPhoto = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Header title="User Profile" onPress={() => navigation.goBack()} />
+        <BackButton onPress={() => navigation.goBack()} />
+        <Text style={{ fontSize: 20, color: "white" }}>User's Profile</Text>
+        <Gap width={25} />
       </View>
       <Animatable.View animation="fadeInUpBig" style={styles.body}>
         <View style={styles.avatarWrapper}>
@@ -113,7 +115,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   body: {
-    height: "75%",
+    height: "85%",
     width: "100%",
     backgroundColor: "white",
     borderTopLeftRadius: 25,
@@ -121,9 +123,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   header: {
-    height: "25%",
+    height: "15%",
     width: "100%",
     flexDirection: "row",
+    paddingTop: 20,
+    paddingLeft: 20,
+    alignItems: "center",
+    justifyContent: "space-between",
   },
   container: {
     flex: 1,

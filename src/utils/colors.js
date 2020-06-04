@@ -9,4 +9,6 @@ export const colors = {
   dongker: "#112340",
   disable: "#EDEEF0",
   cardLight: "#EDFCFD",
+  border: "#e9e9e9",
+  blue1: "#0066cb",
 };

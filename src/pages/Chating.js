@@ -12,7 +12,7 @@ const Doctor = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <View style={{ flexDirection: "row" }}>
+        <View style={styles.header}>
           <BackButton onPress={() => navigation.goBack()} />
           <Gap width={20} />
           <HomeProfile
@@ -45,6 +45,7 @@ const Doctor = ({ navigation }) => {
 export default Doctor;
 
 const styles = StyleSheet.create({
+  header: { flexDirection: "row", alignItems: "center" },
   chatDate: {
     fontSize: 11,
     color: colors.secondary,

@@ -9,7 +9,7 @@ const Login = ({ navigation }) => {
     <View style={styles.container}>
       <View style={styles.top}>
         <Image source={Doctor} style={styles.image} />
-        <Text style={styles.header}>Masuk dan mulai berkonsultasi</Text>
+        <Text style={styles.header}>Sign in and start consultation</Text>
       </View>
       <Animatable.View animation="fadeInUpBig" style={styles.bottom}>
         <View>

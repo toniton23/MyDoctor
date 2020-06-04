@@ -10,7 +10,7 @@ const GetStarted = ({ navigation }) => {
         <View>
           <Image source={Logo} style={styles.logo} />
           <Text style={styles.text}>
-            Konsultasi dengan dokter jadi lebih mudah & fleksibel
+            Consultation with a doctor is easier and more flexible
           </Text>
         </View>
         <View>

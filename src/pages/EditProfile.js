@@ -4,27 +4,26 @@ import { Input, Button, Gap, BackButton } from "../components";
 import * as Animatable from "react-native-animatable";
 import { Shay, Btnx } from "../asset/img";
 import { colors } from "../utils/colors";
+import { ScrollView } from "react-native-gesture-handler";
 
 const Login = ({ onPress, navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.top}>
-        <View style={{ marginLeft: 20 }}>
-          <BackButton onPress={() => navigation.goBack()} />
-        </View>
-        <View style={{ marginTop: -50, justifyContent: "center" }}>
-          <Text style={styles.header}>Edit your profile</Text>
+        <BackButton onPress={() => navigation.goBack()} />
+        <View style={styles.header}>
+          <Text style={styles.profile}>Edit your profile</Text>
           <Gap height={15} />
-          <View>
-            <Image source={Shay} style={styles.image} />
-            <Image source={Btnx} style={styles.BtnPlus} />
-          </View>
+          <Image source={Shay} style={styles.image} />
+          <Image source={Btnx} style={styles.BtnPlus} />
+          <Gap height={30} />
         </View>
+        <Gap width={25} />
       </View>
 
       <Animatable.View animation="fadeInUpBig" style={styles.bottom}>
-        <View>
-          <View style={{ marginTop: -20 }}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View>
             <Input label="Full Name" />
             <Gap height={16} />
             <Input label="Pekerjaan" />
@@ -38,7 +37,7 @@ const Login = ({ onPress, navigation }) => {
             title="Save Profile"
             onPress={() => navigation.goBack("UserProfile")}
           />
-        </View>
+        </ScrollView>
       </Animatable.View>
     </View>
   );
@@ -47,18 +46,18 @@ const Login = ({ onPress, navigation }) => {
 export default Login;
 
 const styles = StyleSheet.create({
+  header: { justifyContent: "center", alignItems: "center" },
   BtnPlus: {
     position: "absolute",
-    bottom: 8,
-    left: 100,
+    bottom: 25,
+    left: 120,
     width: 40,
     height: 40,
   },
   image: { height: 110, width: 110, borderRadius: 110 / 2, marginLeft: 15 },
-  header: {
+  profile: {
     fontSize: 20,
     fontWeight: "bold",
-    marginRight: 130,
     color: "white",
     maxWidth: 200,
   },
@@ -69,6 +68,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     flexDirection: "row",
     paddingTop: 40,
+    paddingLeft: 20,
   },
   bottom: {
     height: "70%",
@@ -76,7 +76,8 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
     backgroundColor: "white",
-    padding: 40,
+    paddingHorizontal: 40,
+    paddingTop: 20,
   },
   container: {
     flex: 1,
